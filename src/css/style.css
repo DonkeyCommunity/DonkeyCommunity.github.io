@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
 /* Global */
 * {
@@ -15,10 +17,30 @@
    overflow: visible;
    font-size: 'Poppins', sans-serif;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    height: 100vh;
    width: 100%;
-   background: #86B7FE;
+   background: url("../images/contact__background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   align-items: center;
+   justify-content: center;
+}
+
+.contact__heading {
+   display: block;
+   font-size: 64px;
+   margin-top: 5rem;
+   font-family: 'Dosis', sans-serif;
+   color: white;
+}
+
+/* contact us main container */
+.contact__container {
+   display: flex;
+   flex-direction: row;
+   height: 100%;
+   width: 100%;
    align-items: center;
    justify-content: center;
 }
@@ -28,23 +50,24 @@
    display: block;
    width: 20rem;
    height: 20rem;
-   border: 10px solid blue;
+   border: 10px solid #3498db;
    border-radius: 10rem;
    margin: 0 8rem 0 0;
 }
 
 /* form__container */
 .form__container {
-   background: #fff;
+   background: rgba(255, 255, 255, 0.685);
    width: 50rem;
    padding: 25px 40px 60px 40px;
    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+   border-radius: 5px;
 }
 
 /* form title */
 .form__container .text {
    font-size: 35px;
-   font-weight: 600;
+   font-weight: 900;
    text-align: center;
    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
    -webkit-background-clip: text;
@@ -67,6 +90,15 @@
    height: 40px;
    margin: 0 20px;
    position: relative;
+}
+
+.input__data input,
+.input__data textarea {
+   opacity: 0;
+}
+
+.input__data .submit__btn input {
+   opacity: 1;
 }
 
 .contact__form .form__row .textarea {
@@ -105,7 +137,6 @@
 .textarea label {
    width: 100%;
    bottom: 20px;
-   background: #fff;
 }
 
 .input__data .underline {
@@ -178,16 +209,25 @@ transform: scale(1);
 }
 
 @media (max-width: 769px) {
+
    .contact__us {
+      width: 100%;
+   }
+
+   .contact__container {
       flex-direction: column;
       width: 100%;
+   }
+
+   .contact__heading {
+      display: none;
    }
 
    .contact__logo {
       display: hidden;
       width: 5rem;
       height: 5rem;
-      border: 5px solid blue;
+      border: 5px solid #3498db;
       border-radius: 5rem;
       margin: 0 0 10px 0;
    }
